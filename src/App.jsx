@@ -7,10 +7,14 @@ import Footer from './components/Footer'
 import Carrossel from './components/Home'
 import Menu from './components/Menu'
 import NavIcon from './components/NavIcon'
+import ModalRegistro from './components/ModalRegistro'
+
+
 
 export default function App() {
   return (
     <div>
+      <ModalRegistro/>
       <Header />
       <NavIcon />
       <Carrossel />
