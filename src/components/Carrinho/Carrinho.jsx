@@ -85,7 +85,8 @@ const Carrinho = () => {
         </div>
 
         <div className="checkout">
-            <ConcluirCompra/>
+        <ConcluirCompra carrinhoItens={carrinhoItens} />
+
         </div>
       </div>
     </div>
