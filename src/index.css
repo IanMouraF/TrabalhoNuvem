@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'Inria Sans Light';
+  src: url('fonts/InriaSans-Light.ttf') format('truetype');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inria Sans Regular';
+  src: url('fonts/InriaSans-Regular.ttf') format('truetype');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body {
+  font-family: 'Inria Sans', sans-serif;
+  background-color: #e9e9e9;
+}
+

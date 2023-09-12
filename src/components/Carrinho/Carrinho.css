@@ -1,0 +1,165 @@
+.item-carrinho {
+  padding: 10px;
+  width: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.carrinhopai {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.carrinho {
+  font-family: 'Inria Sans Regular', sans-serif;
+}
+
+.carrinho {
+  border-radius: 25px;
+  background-color: #f6fafb;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 1.6rem;
+  width: 28.75rem;
+  height: 59rem;
+}
+.carrinho h1{
+  margin-right: 16.8rem;
+}
+
+.quantidade-controle span{
+  margin-left: 0.1rem;
+}
+
+.totalcontainer {
+  width: 26.4rem;
+  margin-top: 30rem;
+  margin-right: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total {
+  display: flex; 
+  justify-content: space-between; 
+  width: 100%; 
+  
+}
+
+.total-left {
+  text-align: left;
+  font-family: "Inria Sans Light";
+}
+
+.total-right {
+  text-align: right;
+  font-family: "Inria Sans Regular";
+}
+
+
+.item-carrinho span {
+  display: block;
+  margin-bottom: 2px;
+}
+
+.item-carrinho img {
+  width: 150px;
+  height: 86px;
+  border-radius: 15px;
+}
+
+.item-carrinho .info {
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.info-left {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.info-left .quantidade-controle {
+  background-color: #f8fcff;
+  border-radius: 9px;
+  border: 2px solid #eaeff2;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 70px;
+}
+
+.info-left .quantidade-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 4px;
+  margin-left: 10px;
+}
+
+.info-left .minus-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 5px;
+  margin-right: 10px;
+  margin-left: 2.8px;
+  padding-top: 3px;
+}
+
+.info-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-left: auto;
+}
+
+.info-right .remove-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 1.5rem;
+  color: rgb(0, 0, 0);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; 
+}
+
+.preco {
+  width: 100px;
+  text-align: right;
+}
+
+.concluir-compra{
+  margin-right: 9rem;
+  
+}
+
+.concluir{
+  border-radius: 24px;
+  cursor: pointer;
+  border: none;
+  color: white;
+  background-color: #449a24;
+  padding: 14px;
+  font-size: 1rem;
+  font-family: 'Inria Sans Regular', sans-serif;
+}
+.concluir:hover{
+  background-color: rgb(34, 100, 34);
+}
+
+.pedidos {
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-right: 20px;
+}
