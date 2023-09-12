@@ -1,11 +1,11 @@
 import React from 'react'
 import Header from './components/header'
 import About from './components/About'
-import Cart from './components/Cart'
+import Carrinho from './components/Cart'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Carrossel from './components/Home'
-import Menu from './components/Menu'
+import Produtos from './components/Menu'
 import NavIcon from './components/NavIcon'
 
 export default function App() {
@@ -14,12 +14,9 @@ export default function App() {
       <Header />
       <NavIcon />
       <Carrossel />
-      <About />
-      <Menu />
-      <Cart />
-      <Contact />
+      <Produtos />
+      <Carrinho />
       <Footer />
-
     </div>
   )
 }

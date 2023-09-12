@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Carrossel = () => {
-  return <div>Home</div>
+  return <div>Carrossel</div>
 }
 
 export default Carrossel
