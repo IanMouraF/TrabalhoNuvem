@@ -14,12 +14,15 @@ const Produtos = () => {
         { id: 9, price: 9.99, name: "Produto 9" },
     ];
     return (
-        <div className="productsComponent">
-            <h2 className="menuTitle">Cardápio</h2>
-            <div className="productsGrid">
+        <div className="products-component">
+            <h2 className="products-title">Cardápio</h2>
+            <div className="products-grid">
                 {products.map((product) => (
                     <div className="product" key={product.id}>
-                        {product.name}, R$ {product.price}
+                        <div className="product-image"></div>
+                        <div>
+                            {product.name}, R$ {product.price}
+                        </div>
                     </div>
                 ))}
             </div>
