@@ -9,8 +9,9 @@ import NavIcon from "./components/NavIcon";
 export default function App() {
     return (
         <div>
-            <Carrossel />
+            <Produtos />
             <div className="ian">
+                <Carrossel />
                 <div className="teste"></div>
                 <Carrinho />
             </div>

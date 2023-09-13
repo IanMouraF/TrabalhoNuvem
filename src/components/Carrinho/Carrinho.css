@@ -14,12 +14,14 @@
 }
 
 .carrinho {
-  border-radius: 25px;
+  border-radius: 24px;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
   background-color: #f6fafb;
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  height: 55rem;
+  height: 50rem;
 }
 .carrinho h1{
   margin-bottom: 2.5rem;
