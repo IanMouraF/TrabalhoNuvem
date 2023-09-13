@@ -1,20 +1,21 @@
 import React from 'react'
-import Header from './components/header'
 import About from './components/About'
 import Cart from './components/Cart'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import Header from './components/Header'
 import Carrossel from './components/Home'
 import Menu from './components/Menu'
+import ModalCadastro from './components/ModalCadastro'
+import ModalLogin from './components/ModalLogin'
 import NavIcon from './components/NavIcon'
-import ModalRegistro from './components/ModalRegistro'
 
 
 
 export default function App() {
   return (
     <div>
-      <ModalRegistro/>
+      <ModalLogin/><ModalCadastro/>
       <Header />
       <NavIcon />
       <Carrossel />
