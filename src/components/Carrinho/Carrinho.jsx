@@ -85,11 +85,11 @@ const Carrinho = () => {
         </div>
 
         <div className="checkout">
-            <ConcluirCompra/>
+        <ConcluirCompra carrinhoItens={carrinhoItens} />
         </div>
       </div>
     </div>
   );
 }
 
-export default Carrinho;
+export default Carrinho; //teste
