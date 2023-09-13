@@ -1,3 +1,36 @@
-body{
-  background-color: gainsboro;
+/* /* Carrossel.css */
+
+.banner-carousel {
+  margin-top: 150px;
+  position:absolute;
+  width: 1000px;
+}
+.banner-carousel img {
+  height: 250px;
+  border-radius: 15px;
+}
+
+.radio-buttons {
+  position: absolute;
+  bottom: -20px; 
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.radio-buttons input[type="radio"] {
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #ccc; 
+  border-radius: 50%;
+  margin: 0 5px; 
+  cursor: pointer;
+  outline: none;
+}
+
+.radio-buttons input[type="radio"]:checked {
+  background-color: #3D991E; 
 }
