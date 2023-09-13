@@ -9,14 +9,15 @@ import NavIcon from './components/NavIcon'
 export default function App() {
   return (
 
-    <div>
-      
-    <div className='ian'>
-      <Carrossel />
-      <div className="teste">
+    <div className='app-wrapper'>
+      <div className='container'>
+        <div className="wrapper">
+          <header><h1>header</h1></header>
+          <Carrossel />
+          <main className='main-content'></main>
+        </div>
+        <Carrinho />
       </div>
-      <Carrinho />
-    </div>
     </div>
   )
 }
