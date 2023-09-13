@@ -8,7 +8,9 @@ import NavIcon from './components/NavIcon'
 
 export default function App() {
   return (
-    <div>
+    <div className='ian'>
+      <div className="teste">
+      </div>
       <Carrinho />
     </div>
   )
