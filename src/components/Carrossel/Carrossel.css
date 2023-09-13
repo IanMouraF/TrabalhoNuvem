@@ -2,12 +2,13 @@
 
 .banner-carousel {
   margin-top: 150px;
+  margin-left: 6rem;
   position:absolute;
-  width: 56.5rem;
+  width: 63.5rem;
 }
 .banner-carousel img {
   height: 13rem;
-  border-radius: 15px;
+  border-radius: 25px;
 }
 
 .radio-buttons {

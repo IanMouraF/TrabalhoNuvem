@@ -21,11 +21,17 @@ body {
 }
 
 .teste {
+  border-radius: 24px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
   display: flex;
+  background-color: #FFFFFF;
   flex: 1;
 }
 
 .ian{
+  height: 54rem;
+  margin: 2rem;
   display: flex;
   justify-content: space-between;
 }

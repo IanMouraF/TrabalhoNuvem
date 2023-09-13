@@ -10,8 +10,9 @@ export default function App() {
   return (
 
     <div>
-      <Carrossel />
+      
     <div className='ian'>
+      <Carrossel />
       <div className="teste">
       </div>
       <Carrinho />
