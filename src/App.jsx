@@ -8,18 +8,16 @@ import Footer from "./components/Footer/Footer";
 import "./App.css";
 
 export default function App() {
-  return (
-    <div className='app-wrapper'>
-      <div className='container'>
-        <div className="wrapper">
-          <Header />
-          <header><h1>header</h1></header>
-          <Carrossel />
-          <main className='main-content'></main>
+    return (
+        <div>
+            <Header />
+            <Produtos />
+            <div className="ian">
+                <Carrossel />
+                <div className="teste"></div>
+                <Carrinho />
+            </div>
+            <Footer />
         </div>
-        <Carrinho />
-      </div>
-      <Footer />
-    </div>
-  )
+    );
 }
