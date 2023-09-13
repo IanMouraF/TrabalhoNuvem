@@ -9,17 +9,21 @@ import "./App.css";
 
 export default function App() {
   return (
-    <div className='app-wrapper'>
-      <div className='container'>
-        <div className="wrapper">
-          <Header />
-          <header><h1>header</h1></header>
-          <Carrossel />
-          <main className='main-content'></main>
+    <div className="footer">
+      <div className='app-wrapper'>
+        <div className='container'>
+          <div className="wrapper">
+            <Header />
+            <Carrossel />
+            <Produtos />
+            <main className='main-content'></main>
+          </div>
+          <Carrinho />
         </div>
-        <Carrinho />
       </div>
       <Footer />
     </div>
+
+
   )
 }
