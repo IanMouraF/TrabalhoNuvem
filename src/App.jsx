@@ -15,4 +15,14 @@ export default function App() {
       <Footer/>
     </div>
   )
+    return (
+        <div>
+            <Produtos />
+            <div className="ian">
+                <Carrossel />
+                <div className="teste"></div>
+                <Carrinho />
+            </div>
+        </div>
+    );
 }
