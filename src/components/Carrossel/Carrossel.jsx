@@ -18,9 +18,9 @@ class BannerCarousel extends Component {
   render() {
     const { selectedSlide } = this.state;
     const banners = [
-      '/public/images/banner1.jpg',
-      '/public/images/banner2.jpg',
-      '/public/images/banner3.jpg',
+      'https://i.ibb.co/PQR8r9v/banner1-1.jpg',
+      'https://i.ibb.co/RSgSs0N/banner3.jpg',
+      'https://i.ibb.co/g6bsRVK/banner2.jpg',
     ];
 
     return (

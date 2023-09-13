@@ -3,10 +3,10 @@
 .banner-carousel {
   margin-top: 150px;
   position:absolute;
-  width: 1000px;
+  width: 56.5rem;
 }
 .banner-carousel img {
-  height: 250px;
+  height: 13rem;
   border-radius: 15px;
 }
 
