@@ -9,13 +9,13 @@ import '../Modal.css'
 const Header = () => {
   return (
     <div className='header'>
-      <img src={Logo} alt='Logo' className='logo'/>
+      <img src={Logo} alt='Logo' className='logo' />
 
       <div className='line'></div>
 
       <nav className="nav-itens">
-        <ModalLogin/>
-	<ModalCadastro/>
+        <ModalLogin />
+        <ModalCadastro />
         <Link to=''>Home</Link>
         <Link to=''>Cardápio</Link>
         <Link to=''>Contato</Link>

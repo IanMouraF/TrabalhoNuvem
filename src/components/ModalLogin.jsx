@@ -8,7 +8,7 @@ export default function ModalLogin() {
     setModal(!modal);
   };
 
-  if(modal) {
+  if (modal) {
     document.body.classList.add('active-modal')
   } else {
     document.body.classList.remove('active-modal')
@@ -24,30 +24,30 @@ export default function ModalLogin() {
         <div className="modal">
           <div onClick={toggleModal} className="overlay"></div>
           <div className="modal-content">
-            
-           
 
 
-		<form>
-            <div className="box">
+
+
+            <form>
+              <div className="box">
                 <h3 className="text-login">Login</h3>
-                <input className="input" name="email" type="email" placeholder="Email"/><br/>
-                <input className="input" name="username" type="password" placeholder="Password"/><br/>
+                <input className="input" name="email" type="email" placeholder="Email" /><br />
+                <input className="input" name="username" type="password" placeholder="Password" /><br />
                 <button className="btn-send">Entrar</button>
-              
-            </div>
-        </form>
-        
-        
+
+              </div>
+            </form>
+
+
 
             <button className="close-modal" onClick={toggleModal}>
-              
-		✖
+
+              ✖
             </button>
           </div>
         </div>
       )}
-      
+
     </>
   );
 }
