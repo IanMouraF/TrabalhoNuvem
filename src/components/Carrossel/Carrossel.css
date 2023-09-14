@@ -8,10 +8,11 @@
 .banner-carousel img {
   justify-content: center;
   align-items: center;
-  max-width: 70%; 
+  max-width: 100%; 
   height: auto; 
   border-radius: 24px;
 }
+
 
 
 .radio-buttons {

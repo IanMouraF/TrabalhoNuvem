@@ -157,5 +157,8 @@
 
 .pedidos {
   flex: 1;
+  max-height: 60rem; /* Defina a altura máxima desejada para o elemento */
+  overflow-y: auto; /* Adicione uma barra de rolagem vertical quando necessário */
 }
+
 
