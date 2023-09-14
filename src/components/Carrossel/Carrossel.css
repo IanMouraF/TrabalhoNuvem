@@ -26,10 +26,9 @@
 .radio-buttons input[type="radio"] {
   appearance: none;
   display: flex;
-  
+  background-color: #e2eedf;
   width: 12px;
   height: 12px;
-  border: 2px solid #ccc; 
   border-radius: 50%;
   margin: 0 5px; 
   cursor: pointer;

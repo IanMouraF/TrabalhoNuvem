@@ -17,14 +17,16 @@
 }
 
 .product {
-    background-color: #cecece87;
+    border-radius: 24px;
+    background-color: transparent; /* #cecece87 */
     display: flex;
     flex-direction: column;
     min-height: 100px;
 }
 
 .product-image {
-    height: 100px;
+    border-radius: 15px;
+    height: 130px;
     background-size: cover;
     background-position: center;
     background-image: url(https://diariodonordeste.verdesmares.com.br/image/contentid/policy:1.3273074:1661909998/Macarr-o-com-carne-moida.jpg?f=default&$p$f=81ff1fa);

@@ -26,7 +26,9 @@ class BannerCarousel extends Component {
     return (
       <div className="banner-carousel">
         <Carousel
+          axis='axis'
           showArrows={false}
+          infiniteLoop={true}
           showStatus={false}
           showThumbs={false}
           selectedItem={selectedSlide}
@@ -61,4 +63,3 @@ class BannerCarousel extends Component {
 }
 
 export default BannerCarousel;
-

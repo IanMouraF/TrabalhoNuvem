@@ -71,3 +71,22 @@ header{
   justify-content: space-between;
   flex: 1;
 }
+
+.carrinho ::-webkit-scrollbar {
+  width: 20px;
+}
+
+.carrinho ::-webkit-scrollbar-thumb {
+  background-color: #DAF2D0;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+.carrinho ::-webkit-scrollbar-thumb:hover {
+  background-color: #3D991E;
+}
+
+.carrinho ::-webkit-scrollbar-track {
+  background-color: transparent;
+}

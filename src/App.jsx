@@ -9,7 +9,7 @@ import "./App.css";
 
 export default function App() {
   return (
-    <div className="footer">
+    <div>
       <div className='app-wrapper'>
         <div className='container'>
           <div className="wrapper">
