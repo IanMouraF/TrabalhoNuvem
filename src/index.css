@@ -34,14 +34,14 @@ body {
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
   background-color: #FFFFFF;
-
-
   display: flex;
   flex-direction: column;
   flex: 1;
   padding: 2rem;
   gap: 1rem;
 }
+
+
 
 .app-wrapper{
   justify-content: space-between;
@@ -89,4 +89,15 @@ header{
 
 .carrinho ::-webkit-scrollbar-track {
   background-color: transparent;
+}
+
+@media (max-width: 600px) {
+  .container,
+  .carrinhopai{
+    display: block;
+  }
+  .carrinho{
+    border-bottom-left-radius: 24px;
+    border-top-right-radius: 0px;
+  }
 }
