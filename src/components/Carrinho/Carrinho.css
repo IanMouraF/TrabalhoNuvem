@@ -21,7 +21,7 @@
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  height: 50rem;
+  height: 80rem;
 }
 .carrinho h1{
   margin-bottom: 2.5rem;
@@ -159,4 +159,7 @@
 
 .pedidos {
   flex: 1;
+  max-height: 100%; /* Defina a altura máxima desejada para o elemento */
+  overflow-y: auto; /* Adicione uma barra de rolagem vertical quando necessário */
 }
+

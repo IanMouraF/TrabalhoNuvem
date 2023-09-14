@@ -6,7 +6,6 @@ import ModalLogin from '../ModalLogin'
 import ModalCadastro from '../ModalCadastro'
 import '../Modal.css'
 
-
 const Header = () => {
   return (
     <div className='header'>
@@ -14,10 +13,9 @@ const Header = () => {
 
       <div className='line'></div>
 
-
       <nav className="nav-itens">
         <ModalLogin/>
-	      <ModalCadastro/>
+	<ModalCadastro/>
         <Link to=''>Home</Link>
         <Link to=''>Cardápio</Link>
         <Link to=''>Contato</Link>

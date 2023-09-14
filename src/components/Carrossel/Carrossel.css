@@ -1,15 +1,19 @@
 /* /* Carrossel.css */
 
 .banner-carousel {
-  margin-top: 150px;
-  margin-left: 6rem;
-  position:absolute;
-  width: 63.5rem;
+  display: flex;
+  flex-direction: row;
 }
+
 .banner-carousel img {
-  height: 13rem;
-  border-radius: 25px;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%; 
+  height: auto; 
+  border-radius: 24px;
 }
+
+
 
 .radio-buttons {
   position: absolute;
@@ -23,9 +27,10 @@
 
 .radio-buttons input[type="radio"] {
   appearance: none;
+  display: flex;
+  background-color: #e2eedf;
   width: 12px;
   height: 12px;
-  border: 2px solid #ccc; 
   border-radius: 50%;
   margin: 0 5px; 
   cursor: pointer;
