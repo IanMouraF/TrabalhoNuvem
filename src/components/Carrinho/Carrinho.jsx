@@ -20,6 +20,77 @@ const Carrinho = () => {
       quantidade: 1,
       preco: 5.99,
     },
+    {
+      id: 3,
+      nome: 'Sanduiche',
+      imagemUrl: 'https://www.teenaagnel.com/wp-content/uploads/2019/12/food-photography-in-dubai.jpg',
+      quantidade: 2,
+      preco: 10.99,
+    },
+    {
+      id: 4,
+      nome: 'Salada',
+      imagemUrl: 'https://hips.hearstapps.com/hmg-prod/images/grilled-chicken-breast-lunch-bowl-with-fresh-tomato-royalty-free-image-1684934244.jpg',
+      quantidade: 1,
+      preco: 5.99,
+    },
+    {
+      id: 5,
+      nome: 'Sanduiche',
+      imagemUrl: 'https://www.teenaagnel.com/wp-content/uploads/2019/12/food-photography-in-dubai.jpg',
+      quantidade: 2,
+      preco: 10.99,
+    },
+    {
+      id: 6,
+      nome: 'Salada',
+      imagemUrl: 'https://hips.hearstapps.com/hmg-prod/images/grilled-chicken-breast-lunch-bowl-with-fresh-tomato-royalty-free-image-1684934244.jpg',
+      quantidade: 1,
+      preco: 5.99,
+    },
+    {
+      id: 7,
+      nome: 'Sanduiche',
+      imagemUrl: 'https://www.teenaagnel.com/wp-content/uploads/2019/12/food-photography-in-dubai.jpg',
+      quantidade: 2,
+      preco: 10.99,
+    },
+    {
+      id: 8,
+      nome: 'Salada',
+      imagemUrl: 'https://hips.hearstapps.com/hmg-prod/images/grilled-chicken-breast-lunch-bowl-with-fresh-tomato-royalty-free-image-1684934244.jpg',
+      quantidade: 1,
+      preco: 5.99,
+    },
+    {
+      id: 9,
+      nome: 'Sanduiche',
+      imagemUrl: 'https://www.teenaagnel.com/wp-content/uploads/2019/12/food-photography-in-dubai.jpg',
+      quantidade: 2,
+      preco: 10.99,
+    },
+    {
+      id: 10,
+      nome: 'Salada',
+      imagemUrl: 'https://hips.hearstapps.com/hmg-prod/images/grilled-chicken-breast-lunch-bowl-with-fresh-tomato-royalty-free-image-1684934244.jpg',
+      quantidade: 1,
+      preco: 5.99,
+    },
+    {
+      id: 11,
+      nome: 'Sanduiche',
+      imagemUrl: 'https://www.teenaagnel.com/wp-content/uploads/2019/12/food-photography-in-dubai.jpg',
+      quantidade: 2,
+      preco: 10.99,
+    },
+    {
+      id: 12,
+      nome: 'Salada',
+      imagemUrl: 'https://hips.hearstapps.com/hmg-prod/images/grilled-chicken-breast-lunch-bowl-with-fresh-tomato-royalty-free-image-1684934244.jpg',
+      quantidade: 1,
+      preco: 5.99,
+    },
+    
   ]);
 
   const [total, setTotal] = useState(0);
