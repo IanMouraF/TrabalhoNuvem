@@ -8,6 +8,7 @@ import Footer from "./components/Footer/Footer";
 import "./App.css";
 
 export default function App() {
+
   return (
     <div>
       <div className='app-wrapper'>
@@ -27,3 +28,4 @@ export default function App() {
 
   )
 }
+
