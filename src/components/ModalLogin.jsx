@@ -30,10 +30,10 @@ export default function ModalLogin() {
 
 		<form>
             <div className="box">
-                <h3>Login</h3>
-                <input  name="username" type="text" placeholder="User Name"/><br/>
-                <input  name="username" type="password" placeholder="Password"/><br/>
-                <button>Entrar</button>
+                <h3 className="text-login">Login</h3>
+                <input className="input" name="email" type="email" placeholder="Email"/><br/>
+                <input className="input" name="username" type="password" placeholder="Password"/><br/>
+                <button className="btn-send">Entrar</button>
               
             </div>
         </form>
@@ -41,7 +41,8 @@ export default function ModalLogin() {
         
 
             <button className="close-modal" onClick={toggleModal}>
-              Close
+              
+		✖
             </button>
           </div>
         </div>

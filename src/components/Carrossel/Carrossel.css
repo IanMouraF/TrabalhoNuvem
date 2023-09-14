@@ -1,0 +1,37 @@
+/* /* Carrossel.css */
+
+.banner-carousel {
+  margin-top: 150px;
+  margin-left: 6rem;
+  position:absolute;
+  width: 63.5rem;
+}
+.banner-carousel img {
+  height: 13rem;
+  border-radius: 25px;
+}
+
+.radio-buttons {
+  position: absolute;
+  bottom: -20px; 
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.radio-buttons input[type="radio"] {
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #ccc; 
+  border-radius: 50%;
+  margin: 0 5px; 
+  cursor: pointer;
+  outline: none;
+}
+
+.radio-buttons input[type="radio"]:checked {
+  background-color: #3D991E; 
+}

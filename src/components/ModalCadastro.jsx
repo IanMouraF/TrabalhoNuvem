@@ -32,17 +32,19 @@ export default function ModalCadastro() {
 
 		<form>
             <div className="box">
-                <h3>Cadastrar</h3>
-                <input  name="username" type="text" placeholder="User Name"/><br/>
-                <input  name="username" type="password" placeholder="Password"/><br/>
-                <button>Cadastrar</button>
+                <h3 className="text-login">Cadastrar</h3>
+		<input className="input" name="username" type="text" placeholder="Nome"/><br/>
+                <input className="input" name="email" type="email" placeholder="Email"/><br/>
+                <input className="input" name="username" type="password" placeholder="Senha"/><br/>
+                <button className="btn-send">Cadastrar</button>
               
             </div>
         </form>
         
 
             <button className="close-modal" onClick={toggleModal}>
-              Close
+              
+		✖
             </button>
           </div>
         </div>

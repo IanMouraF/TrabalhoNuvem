@@ -1,14 +1,79 @@
+
 body.active-modal {
     overflow-y: hidden;
 }
 
-.btn-modal {
-    
-    display: block;
-    
-    font-size: 18px;
+.btn-send{
+
+    background-color: #3D991E;
+    margin-left:auto;
+    margin-right:auto;
+    color:white;
+    display:flex;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    /*margin: 4px 2px;*/
+
 }
 
+.btn-modal {
+    
+    
+    font-size: 18px;
+
+    border:none;
+
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+    margin: 1rem 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06rem;
+    font-size: 0.9rem;
+
+    text-align:center;
+
+    color:black;
+
+    font-family: 'Inria Sans', sans-serif;
+
+    background-color:rgba(0,0,0,0);
+
+    margin-left: 10px;
+    margin-right: 10px;
+
+    text-transform:uppercase;
+
+    
+}
+
+.input {
+
+color:#808080;
+background-color:white;
+width:200px;
+height:20px;
+display: flex;
+justify-content: center;
+margin-left: auto;
+margin-right: auto;
+
+text-align: center;
+
+}
+
+.text-login{
+
+text-align: center;
+color:#808080;
+margin-left: auto;
+margin-right: auto;
+margin-bottom:10px;
+
+}
+
+@media only screen and (max-device-width: 900px) {
 .modal, .overlay {
     width: 100vw;
     height: 100vh;
@@ -17,8 +82,11 @@ body.active-modal {
     right: 0;
     bottom: 0;
     position: fixed;
+    display: flex;
+    background-color:white;
+    
 }
-
+}
 .overlay {
     background: rgba(49,49,49,0.8);
 }
@@ -41,3 +109,10 @@ body.active-modal {
     right: 10px;
     padding: 5px 7px;
 }
+
+.nav-itens{
+
+    display:flex;
+
+}
+

@@ -1,30 +1,23 @@
-import React from 'react'
-import About from './components/About'
-import Cart from './components/Cart'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
-import Header from './components/Header'
-import Carrossel from './components/Home'
-import Menu from './components/Menu'
-import ModalCadastro from './components/ModalCadastro'
-import ModalLogin from './components/ModalLogin'
-import NavIcon from './components/NavIcon'
-
-
+import React from "react";
+import Header from "./components/Header/Header";
+import Carrinho from "./components/Carrinho/Carrinho";
+import Carrossel from "./components/Carrossel/Carrossel";
+import Produtos from "./components/Produtos/Produtos";
+import NavIcon from "./components/NavIcon";
+import Footer from "./components/Footer/Footer";
+import "./App.css";
 
 export default function App() {
-  return (
-    <div>
-      <ModalLogin/><ModalCadastro/>
-      <Header />
-      <NavIcon />
-      <Carrossel />
-      <About />
-      <Menu />
-      <Cart />
-      <Contact />
-      <Footer />
-
-    </div>
-  )
+    return (
+        <div>
+            <Header />
+            <Produtos />
+            <div className="ian">
+                <Carrossel />
+                <div className="teste"></div>
+                <Carrinho />
+            </div>
+            <Footer />
+        </div>
+    );
 }
