@@ -1,7 +1,7 @@
 Tabelas - Mínimo
 
 Usuário: Email / Senha  [Samuel]
-Cardápio: Produtos (Nome/Preço/Descrição/Tags/Imagem)
+Cardápio: Produtos (Nome/Preço/Descrição/Categorias/Imagem) [Jonathan/Ian]
 
 ------------------------------------------------------------------------------
 Tabelas - Opcional
@@ -12,4 +12,4 @@ Header: read Username
 ------------------------------------------------------------------------------
 Estado Interno
 
-Carrinho: Total, Endereço, Nome, Método de Pagamento, Inf Adc.
+Carrinho: Total, Endereço, Nome do Usuário, Método de Pagamento, Inf Adc.
