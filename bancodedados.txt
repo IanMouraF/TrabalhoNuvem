@@ -1,0 +1,15 @@
+Tabelas - Mínimo
+
+Usuário: Email / Senha  [Samuel]
+Cardápio: Produtos (Nome/Preço/Descrição/Tags/Imagem)
+
+------------------------------------------------------------------------------
+Tabelas - Opcional
+
+Carrossel: Url
+
+Header: read Username
+------------------------------------------------------------------------------
+Estado Interno
+
+Carrinho: Total, Endereço, Nome, Método de Pagamento, Inf Adc.
