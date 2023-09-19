@@ -1,0 +1,9 @@
+Jonathan/Ian:
+App.jsx e Produtos.jsx
+Leitura do BD e criar estado interno
+
+Samuel: 
+Inclusão de usuários e Logout
+
+Junior/Vitoria:
+Modal ou Página de gestão cardápio ao estar logado
