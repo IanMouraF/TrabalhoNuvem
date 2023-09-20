@@ -2,6 +2,28 @@ import React from "react";
 import "./ProdutosStyles.css";
 const Produtos = ({ appData, setAppData }) => {
     // produtos pra testar a funcionalidade
+    const addToCart = (productToAdd) => {
+        setAppData((prevData) => {
+            let itemFound = false;
+            const newCartItens = prevData.carrinho.itens.map((p) => {
+                if (p.id === productToAdd.id) {
+                    itemFound = true;
+                    return { ...p, quantidade: p.quantidade + 1 };
+                }
+                return p;
+            });
+            if (!itemFound) {
+                newCartItens.push({ ...productToAdd, quantidade: 1 });
+            }
+            return {
+                ...prevData,
+                carrinho: {
+                    ...prevData.carrinho,
+                    itens: newCartItens,
+                },
+            };
+        });
+    };
     return (
         <div className="products-component">
             <h2 className="products-title">Cardápio</h2>
