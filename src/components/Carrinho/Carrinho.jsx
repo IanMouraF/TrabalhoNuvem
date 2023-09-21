@@ -60,22 +60,24 @@ const Carrinho = ({ appData, setAppData }) => {
     }));
   };
 
+  const [enderecoPreenchido, setEnderecoPreenchido] = useState(false);
+
   // Função para atualizar a quantidade de um item no carrinho
   const handleAtualizarQuantidade = (itemId, novaQuantidade) => {
-  const novoCarrinho = appData.carrinho.itens.map((item) => {
-    if (item.id === itemId) {
-      return { ...item, quantidade: novaQuantidade };
-    }
-    return item;
-  });
-  setAppData((prevData) => ({
-    ...prevData,
-    carrinho: {
-      ...prevData.carrinho,
-      itens: novoCarrinho,
-    },
-  }));
-};
+    const novoCarrinho = appData.carrinho.itens.map((item) => {
+      if (item.id === itemId) {
+        return { ...item, quantidade: novaQuantidade };
+      }
+      return item;
+    });
+    setAppData((prevData) => ({
+      ...prevData,
+      carrinho: {
+        ...prevData.carrinho,
+        itens: novoCarrinho,
+      },
+    }));
+  };
 
 
   useEffect(() => {
@@ -115,11 +117,13 @@ const Carrinho = ({ appData, setAppData }) => {
           placeholder="Endereço de entrega"
           value={endereco}
           onChange={handleEnderecoChange}
+          onBlur={() => setEnderecoPreenchido(endereco.trim() !== '')}
         />
-                <select className='formaPagamento'
+        <select className='formaPagamento'
           value={formaPagamento}
           onChange={handleFormaPagamentoChange}
         >
+          <option value="cartao">Cartão de Débito</option>
           <option value="cartao">Cartão de Crédito</option>
           <option value="dinheiro">Dinheiro</option>
           <option value="pix">Pix</option>
@@ -130,7 +134,13 @@ const Carrinho = ({ appData, setAppData }) => {
         <div className='cupom'>
         </div>
         <div className="checkout">
-          <ConcluirCompra carrinhoItens={appData.carrinho.itens} />
+          <ConcluirCompra
+            enderecoPreenchido={enderecoPreenchido}
+            carrinhoItens={appData.carrinho.itens}
+            endereco={endereco}
+            formaPagamento={formaPagamento}
+            observacoes={observacoes}
+          />
         </div>
       </div>
     </div>
