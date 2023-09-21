@@ -1,166 +1,140 @@
-import React, { useState, useEffect } from 'react';
-import ItemCarrinho from './ItemCarrinho';
+import React, { useEffect, useState } from 'react';
 import Total from './Total';
 import ConcluirCompra from './Concluir';
 import './Carrinho.css';
+import ItemCarrinho from './ItemCarrinho';
 
-const Carrinho = () => {
-  const [carrinhoItens, setCarrinhoItens] = useState([
-    {
-      id: 1,
-      nome: 'Sanduiche',
-      imagemUrl: 'https://www.teenaagnel.com/wp-content/uploads/2019/12/food-photography-in-dubai.jpg',
-      quantidade: 2,
-      preco: 10.99,
-    },
-    {
-      id: 2,
-      nome: 'Salada',
-      imagemUrl: 'https://hips.hearstapps.com/hmg-prod/images/grilled-chicken-breast-lunch-bowl-with-fresh-tomato-royalty-free-image-1684934244.jpg',
-      quantidade: 1,
-      preco: 5.99,
-    },
-    {
-      id: 3,
-      nome: 'Sanduiche',
-      imagemUrl: 'https://www.teenaagnel.com/wp-content/uploads/2019/12/food-photography-in-dubai.jpg',
-      quantidade: 2,
-      preco: 10.99,
-    },
-    {
-      id: 4,
-      nome: 'Salada',
-      imagemUrl: 'https://hips.hearstapps.com/hmg-prod/images/grilled-chicken-breast-lunch-bowl-with-fresh-tomato-royalty-free-image-1684934244.jpg',
-      quantidade: 1,
-      preco: 5.99,
-    },
-    {
-      id: 5,
-      nome: 'Sanduiche',
-      imagemUrl: 'https://www.teenaagnel.com/wp-content/uploads/2019/12/food-photography-in-dubai.jpg',
-      quantidade: 2,
-      preco: 10.99,
-    },
-    {
-      id: 6,
-      nome: 'Salada',
-      imagemUrl: 'https://hips.hearstapps.com/hmg-prod/images/grilled-chicken-breast-lunch-bowl-with-fresh-tomato-royalty-free-image-1684934244.jpg',
-      quantidade: 1,
-      preco: 5.99,
-    },
-    {
-      id: 7,
-      nome: 'Sanduiche',
-      imagemUrl: 'https://www.teenaagnel.com/wp-content/uploads/2019/12/food-photography-in-dubai.jpg',
-      quantidade: 2,
-      preco: 10.99,
-    },
-    {
-      id: 8,
-      nome: 'Salada',
-      imagemUrl: 'https://hips.hearstapps.com/hmg-prod/images/grilled-chicken-breast-lunch-bowl-with-fresh-tomato-royalty-free-image-1684934244.jpg',
-      quantidade: 1,
-      preco: 5.99,
-    },
-    {
-      id: 9,
-      nome: 'Sanduiche',
-      imagemUrl: 'https://www.teenaagnel.com/wp-content/uploads/2019/12/food-photography-in-dubai.jpg',
-      quantidade: 2,
-      preco: 10.99,
-    },
-    {
-      id: 10,
-      nome: 'Salada',
-      imagemUrl: 'https://hips.hearstapps.com/hmg-prod/images/grilled-chicken-breast-lunch-bowl-with-fresh-tomato-royalty-free-image-1684934244.jpg',
-      quantidade: 1,
-      preco: 5.99,
-    },
-    {
-      id: 11,
-      nome: 'Sanduiche',
-      imagemUrl: 'https://www.teenaagnel.com/wp-content/uploads/2019/12/food-photography-in-dubai.jpg',
-      quantidade: 2,
-      preco: 10.99,
-    },
-    {
-      id: 12,
-      nome: 'Salada',
-      imagemUrl: 'https://hips.hearstapps.com/hmg-prod/images/grilled-chicken-breast-lunch-bowl-with-fresh-tomato-royalty-free-image-1684934244.jpg',
-      quantidade: 1,
-      preco: 5.99,
-    },
-    
-  ]);
-
+const Carrinho = ({ appData, setAppData }) => {
   const [total, setTotal] = useState(0);
+  const [observacoes, setObservacoes] = useState(appData.carrinho.observacoes || '');
+  const [endereco, setEndereco] = useState(appData.carrinho.endereco || '');
+  const [formaPagamento, setFormaPagamento] = useState(appData.carrinho.formaPagamento || '');
 
-  // Função para calcular o total
-  const calcularTotal = () => {
-    let novoTotal = 0;
+  const handleFormaPagamentoChange = (e) => {
+    const newFormaPagamento = e.target.value;
+    setFormaPagamento(newFormaPagamento);
+    setAppData((prevData) => ({
+      ...prevData,
+      carrinho: {
+        ...prevData.carrinho,
+        formaPagamento: newFormaPagamento,
+      },
+    }));
+  };
 
-    // Percorre a lista de itens no carrinho
-    carrinhoItens.forEach((item) => {
-      // Multiplica a quantidade pelo valor do item e adiciona ao novoTotal
-      novoTotal += item.quantidade * item.preco;
-    });
+  const handleObservacoesChange = (e) => {
+    const newObservacoes = e.target.value;
+    setObservacoes(newObservacoes);
+    // Atualize o appData com as novas observações
+    setAppData((prevData) => ({
+      ...prevData,
+      carrinho: {
+        ...prevData.carrinho,
+        observacoes: newObservacoes,
+      },
+    }));
+  };
 
-    return novoTotal;
+  const handleEnderecoChange = (e) => {
+    const newEndereco = e.target.value;
+    setEndereco(newEndereco);
+    // Atualize o appData com o novo endereço
+    setAppData((prevData) => ({
+      ...prevData,
+      carrinho: {
+        ...prevData.carrinho,
+        endereco: newEndereco,
+      },
+    }));
   };
 
   // Função para remover um item do carrinho com base no ID
   const handleRemoverItem = (itemId) => {
-    const novoCarrinho = carrinhoItens.filter((item) => item.id !== itemId);
-    setCarrinhoItens(novoCarrinho);
+    const novoCarrinho = appData.carrinho.itens.filter((item) => item.id !== itemId);
+    setAppData((prevData) => ({
+      ...prevData,
+      carrinho: {
+        ...prevData.carrinho,
+        itens: novoCarrinho,
+      },
+    }));
   };
 
   // Função para atualizar a quantidade de um item no carrinho
   const handleAtualizarQuantidade = (itemId, novaQuantidade) => {
-    const novoCarrinho = carrinhoItens.map((item) => {
-      if (item.id === itemId) {
-        return { ...item, quantidade: novaQuantidade };
-      }
-      return item;
-    });
-    setCarrinhoItens(novoCarrinho);
-  };
+  const novoCarrinho = appData.carrinho.itens.map((item) => {
+    if (item.id === itemId) {
+      return { ...item, quantidade: novaQuantidade };
+    }
+    return item;
+  });
+  setAppData((prevData) => ({
+    ...prevData,
+    carrinho: {
+      ...prevData.carrinho,
+      itens: novoCarrinho,
+    },
+  }));
+};
 
-  // Efeito que atualiza o total sempre que o carrinhoItens mudar
+
   useEffect(() => {
-    const novoTotal = calcularTotal();
+    // Calcular o total a partir dos itens do carrinho
+    const novoTotal = appData.carrinho.itens.reduce((acc, item) => acc + item.quantidade * item.preco, 0);
     setTotal(novoTotal);
-  }, [carrinhoItens]);
+  }, [appData.carrinho.itens]);
 
   return (
     <div className="carrinhopai">
       <div className='carrinho'>
         <h1>Meu Pedido</h1>
         <div className="pedidos">
-          {carrinhoItens.map((item, index) => (
+          {appData.carrinho.itens.map((item, index) => (
             <ItemCarrinho
               key={item.id}
               id={item.id}
               nome={item.nome}
               quantidade={item.quantidade}
               preco={item.preco}
-              imagemUrl={item.imagemUrl}
+              imagemUrl={item.url}
               onRemoverItem={handleRemoverItem}
-              onAtualizarQuantidade={handleAtualizarQuantidade} // Passar a função de atualização como prop
+              onAtualizarQuantidade={handleAtualizarQuantidade}
             />
           ))}
         </div>
+        {/* Caixa de Observações */}
+        <input className='observacoes'
+          type="text"
+          placeholder="Observações"
+          value={observacoes}
+          onChange={handleObservacoesChange}
+        />
+        {/* Caixa de Endereço */}
+        <input className='endereco'
+          type="text"
+          placeholder="Endereço de entrega"
+          value={endereco}
+          onChange={handleEnderecoChange}
+        />
+                <select className='formaPagamento'
+          value={formaPagamento}
+          onChange={handleFormaPagamentoChange}
+        >
+          <option value="cartao">Cartão de Crédito</option>
+          <option value="dinheiro">Dinheiro</option>
+          <option value="pix">Pix</option>
+        </select>
         <div className="totalcontainer">
-        <Total carrinhoItens={carrinhoItens} onAtualizarQuantidade={handleAtualizarQuantidade} />
+          <Total total={total} carrinhoItens={appData.carrinho.itens} />
         </div>
         <div className='cupom'>
         </div>
-
         <div className="checkout">
-        <ConcluirCompra carrinhoItens={carrinhoItens} />
+          <ConcluirCompra carrinhoItens={appData.carrinho.itens} />
         </div>
       </div>
     </div>
   );
 }
 
-export default Carrinho; //teste
+export default Carrinho;

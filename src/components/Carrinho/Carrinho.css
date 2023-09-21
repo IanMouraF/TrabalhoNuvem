@@ -6,7 +6,7 @@
 
 .carrinhopai {
   display: flex;
-  padding-right: 1.8rem;
+  max-width: 30%;
 }
 
 .carrinho {
@@ -62,8 +62,9 @@
 }
 
 .item-carrinho img {
-  width: 150px;
-  height: 86px;
+  width: 8.75rem;
+  aspect-ratio: calc(7/4);
+  object-fit: fill;
   border-radius: 15px;
 }
 
@@ -163,3 +164,48 @@
   overflow-y: auto; /* Adicione uma barra de rolagem vertical quando necessário */
 }
 
+.endereco, .observacoes, .formaPagamento {
+  width: 320px;
+  display: flex;
+  
+  font-family: IBM Plex Sans, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: #1A2027;
+  background: #fff;
+  border: 1px solid #E0E3E7;
+  box-shadow: 0px 2px 2px #F3F6F9};
+
+  .endereco:hover {
+    border-color: #53b177;
+  } 
+  
+  .observacoes:hover {
+    border-color: #53b177;
+  }
+
+  .endereco:focus {
+    border-color: #53b177;
+    box-shadow: 0 0 0 1.5px #9fe599;
+  } 
+  
+  .observacoes:focus {
+    border-color: #53b177;
+    box-shadow: 0 0 0 1.5px #9fe599;
+  }
+
+  .endereco:focus-visible {
+    outline: 0;
+} 
+
+  .observacoes:focus-visible {
+    outline: 0;
+}
+
+.formaPagamento:focus {
+  border-color: #53b177;
+  box-shadow: 0 0 0 1.5px #9fe599;
+}
