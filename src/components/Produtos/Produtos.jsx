@@ -1,32 +1,50 @@
 import React from "react";
 import "./ProdutosStyles.css";
-const Produtos = () => {
+const Produtos = ({ appData, setAppData }) => {
     // produtos pra testar a funcionalidade
-    const products = [
-        { id: 1, price: 19.99, description: "bla bla bla", name: "Produto 1" },
-        { id: 2, price: 4.99, description: "bla bla bla", name: "Produto 2" },
-        { id: 3, price: 9.99, description: "bla bla bla", name: "Produto 3" },
-        { id: 4, price: 1.99, description: "bla bla bla", name: "Produto 4" },
-        { id: 5, price: 29.99, description: "bla bla bla", name: "Produto 5" },
-        { id: 6, price: 12.99, description: "bla bla bla", name: "Produto 6" },
-        { id: 7, price: 7.99, description: "bla bla bla", name: "Produto 7" },
-        { id: 8, price: 4.99, description: "bla bla bla", name: "Produto 8" },
-        { id: 9, price: 9.99, description: "bla bla bla", name: "Produto 9" },
-    ];
+    const addToCart = (productToAdd) => {
+        setAppData((prevData) => {
+            let itemFound = false;
+            const newCartItens = prevData.carrinho.itens.map((p) => {
+                if (p.id === productToAdd.id) {
+                    itemFound = true;
+                    return { ...p, quantidade: p.quantidade + 1 };
+                }
+                return p;
+            });
+            if (!itemFound) {
+                newCartItens.push({ ...productToAdd, quantidade: 1 });
+            }
+            return {
+                ...prevData,
+                carrinho: {
+                    ...prevData.carrinho,
+                    itens: newCartItens,
+                },
+            };
+        });
+    };
     return (
         <div className="products-component">
             <h2 className="products-title">Cardápio</h2>
             <div className="products-grid">
-                {products.map((product) => (
-                    <div className="product" key={product.id}>
-                        <div className="product-image"></div>
+                {appData.cardapio.map((product) => (
+                    <div
+                        className="product"
+                        key={product.id}
+                        onClick={() => addToCart(product)}
+                    >
+                        <div
+                            className="product-image"
+                            style={{ backgroundImage: `url(${product.url})` }}
+                        ></div>
                         <div className="product-info">
-                            <div className="product-name">{product.name}</div>
+                            <div className="product-name">{product.nome}</div>
                             <div className="product-price">
-                                R$ {product.price}
+                                R$ {product.preco}
                             </div>
                             <div className="product-description">
-                                {product.description}
+                                {product.descricao}
                             </div>
                         </div>
                     </div>
