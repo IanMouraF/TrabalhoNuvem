@@ -45,7 +45,7 @@ export default function App() {
                         <Produtos appData={appData} setAppData={setAppData} />
                         <main className="main-content"></main>
                     </div>
-                    <Carrinho />
+                    <Carrinho appData={appData} setAppData={setAppData} />
                     {console.log(appData)}
                 </div>
             </div>

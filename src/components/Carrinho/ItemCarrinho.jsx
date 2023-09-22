@@ -1,7 +1,11 @@
-import React, { useState } from 'react';
-
+import React, { useEffect, useState } from 'react';
+ 
 const ItemCarrinho = ({ id, nome, quantidade, preco, imagemUrl, onRemoverItem, onAtualizarQuantidade }) => {
   const [quantidadeItem, setQuantidadeItem] = useState(quantidade);
+
+  useEffect(() => {
+    setQuantidadeItem(quantidade)
+  }, [quantidade]);
 
   const handleRemoverClick = () => {
     if (quantidadeItem > 1) {
