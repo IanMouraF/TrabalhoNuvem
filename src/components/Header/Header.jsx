@@ -13,7 +13,7 @@ const Header = () => {
 
       <div className='line'></div>
 
-      <nav className="nav-itens">
+      <nav className='nav-itens'>
         <ModalLogin />
         <ModalCadastro />
         <Link to=''>Home</Link>

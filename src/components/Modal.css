@@ -115,3 +115,9 @@ margin-bottom:10px;
 
 }
 
+/* RESPONSIVIDADE BOTÕES MENU */
+@media screen and (max-width: 500px) {
+    .btn-modal {
+        margin: 0.2rem 1rem; 
+    }
+}
