@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Modal.css";
+import {handleSubmit} from '../handleSubmit'
 
 
 
@@ -30,13 +31,13 @@ export default function ModalCadastro() {
            
 
 
-		<form>
-            <div className="box">
+		<form id="form" method="post">
+            <div className="box" id="divForm">
                 <h3 className="text-login">Cadastrar</h3>
-		<input className="input" name="username" type="text" placeholder="Nome"/><br/>
-                <input className="input" name="email" type="email" placeholder="Email"/><br/>
-                <input className="input" name="username" type="password" placeholder="Senha"/><br/>
-                <button className="btn-send">Cadastrar</button>
+		
+                <input className="input" name="email" type="email" placeholder="Email" id="email"/><br/>
+                <input className="input" name="username" type="password" placeholder="Senha" id="pw"/><br/>
+                <button className="btn-send" onClick={handleSubmit}>Cadastrar</button>
               
             </div>
         </form>
@@ -52,4 +53,5 @@ export default function ModalCadastro() {
       
     </>
   );
+  
 }

@@ -6,7 +6,6 @@
 
 .header .logo {
     width: 7rem;
-    margin: 0 5em;
 }
 
 .header .line {
@@ -27,4 +26,29 @@
     text-transform: uppercase;
     letter-spacing: 0.06rem;
     font-size: 0.9rem;   
+}
+
+/* RESPONSIVIDADE */
+@media screen and (max-width: 500px) {
+    .header {
+        margin-bottom: 1.5rem;
+    }
+    .header .line {
+        margin-bottom: 0.5rem;
+    }
+    .header nav {
+        flex-wrap: wrap;
+    }
+    .header nav a { 
+        margin: 0.2rem 1rem;      
+    }
+}
+
+@media screen and (max-width: 385px) {
+    .header {
+        margin-bottom: 6rem;
+    }
+    .header nav {
+        flex-direction: column;
+    }
 }

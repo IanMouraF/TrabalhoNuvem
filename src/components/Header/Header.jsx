@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import ModalLogin from '../ModalLogin'
 import ModalCadastro from '../ModalCadastro'
 import '../Modal.css'
+import Logout from '../../Logout'
 
 const Header = () => {
   return (
@@ -13,7 +14,8 @@ const Header = () => {
 
       <div className='line'></div>
 
-      <nav className="nav-itens">
+      <nav className='nav-itens'>
+        <Logout/>
         <ModalLogin />
         <ModalCadastro />
         <Link to=''>Home</Link>
