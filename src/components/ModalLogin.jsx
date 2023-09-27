@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom'
 import "./Modal.css";
 
 export default function ModalLogin() {
@@ -33,7 +34,7 @@ export default function ModalLogin() {
                 <h3 className="text-login">Login</h3>
                 <input className="input" name="email" type="email" placeholder="Email" /><br />
                 <input className="input" name="username" type="password" placeholder="Password" /><br />
-                <button className="btn-send">Entrar</button>
+                <Link to='/gerenciamento'><button className="btn-send">Entrar</button></Link>
 
               </div>
             </form>

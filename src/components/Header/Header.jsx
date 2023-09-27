@@ -6,14 +6,14 @@ import ModalLogin from '../ModalLogin'
 import ModalCadastro from '../ModalCadastro'
 import '../Modal.css'
 
-const Header = () => {
+const Header = (props) => {
   return (
-    <div className='header'>
+    <div className='header' style={props.headerStyle}>
       <img src={Logo} alt='Logo' className='logo' />
 
-      <div className='line'></div>
+      <div className='line' style={props.lineStyle}></div>
 
-      <nav className='nav-itens'>
+      <nav className='nav-itens' style={props.navStyle}>
         <ModalLogin />
         <ModalCadastro />
         <Link to=''>Home</Link>
