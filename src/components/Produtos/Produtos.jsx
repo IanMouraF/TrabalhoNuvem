@@ -1,6 +1,9 @@
 import React from "react";
 import "./ProdutosStyles.css";
-const Produtos = ({ appData, setAppData }) => {
+
+const Produtos = ({ appData, setAppData, 
+    textoBotaoEditar, textoBotaoExcluir, estiloBotaoEditar, estiloBotaoExcluir, estiloDivBotoes, estiloCardProduto, estiloGridProduto, 
+    acaoBotaoEditar, acaoBotaoExcluir}) => {
     // produtos pra testar a funcionalidade
     const addToCart = (productToAdd) => {
         setAppData((prevData) => {
@@ -24,19 +27,21 @@ const Produtos = ({ appData, setAppData }) => {
             };
         });
     };
+
     return (
         <div className="products-component">
             <h2 className="products-title">Cardápio</h2>
-            <div className="products-grid">
+            <div className="products-grid" style={estiloGridProduto}>
                 {appData.cardapio.map((product) => (
                     <div
+                        style={estiloCardProduto}
                         className="product"
                         key={product.id}
                         onClick={() => addToCart(product)}
                     >
                         <div
                             className="product-image"
-                            style={{ backgroundImage: `url(${product.url})` }}
+                            style={{ backgroundImage: `url(${product.url})`, width: '100%' }}
                         ></div>
                         <div className="product-info">
                             <div className="product-name">{product.nome}</div>
@@ -46,8 +51,14 @@ const Produtos = ({ appData, setAppData }) => {
                             <div className="product-description">
                                 {product.descricao}
                             </div>
+                            <div style={estiloDivBotoes}>
+                                <button style={estiloBotaoEditar} onClick={() => acaoBotaoEditar(product.id, product.nome)}>{textoBotaoEditar}</button>
+                                <button style={estiloBotaoExcluir} onClick={() => acaoBotaoExcluir(product.id)}>{textoBotaoExcluir}</button>
+                            </div>
                         </div>
+                        
                     </div>
+                    
                 ))}
             </div>
         </div>
