@@ -8,7 +8,7 @@ import Produtos from "./components/Produtos/Produtos";
 import NavIcon from "./components/NavIcon";
 import Footer from "./components/Footer/Footer";
 import "./App.css";
-import ModalGerenciamento from "./components/ModalGerenciamento/ModalGerenciamento.jsx"
+// import ModalGerenciamento from "./components/ModalGerenciamento/ModalGerenciamento.jsx"
 
 export default function App() {
     const [appData, setAppData] = useState({
@@ -41,7 +41,6 @@ export default function App() {
             <div className="app-wrapper">
                 <div className="container">
                     <div className="wrapper">
-                        <ModalGerenciamento />
                         <Header />
                         <Carrossel />
                         <Produtos appData={appData} setAppData={setAppData} />
