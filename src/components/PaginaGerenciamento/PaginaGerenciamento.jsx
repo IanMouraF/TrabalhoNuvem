@@ -1,11 +1,15 @@
 import Header from '../Header/Header'
 import Produtos from '../Produtos/Produtos'
+import ModalCadastroProduto from './ModalCadastroProduto.jsx'
 import { useState, useEffect } from 'react'
 import { collection, getDocs, deleteDoc, doc, updateDoc } from "firebase/firestore/lite"
 import { firestore } from "../../firebase"
 import './ModalEditar.css'
 
 const PaginaGerenciamento = () => {
+
+    const [mostrarModalCadastro, setMostrarModalCadastro] = useState(false);
+
     //ESTILO NAV
     const customHeader = {
         height: '15vh',
@@ -171,8 +175,14 @@ const PaginaGerenciamento = () => {
     }
    
     return (
+        
         <div className='containerGerenciamento'>
             <Header headerStyle={customHeader} navStyle={customNav} lineStyle={lineStyle}/>
+            <div className="botaoCriacao">
+            <button onClick={() => setMostrarModalCadastro(true)} className="botaoCadastrar">
+                    Cadastrar Produto
+            </button>
+            </div>
 
             <div style={{padding: '0 3em'}}>
                 <Produtos appData={appData} setAppData={setAppData} 
@@ -210,6 +220,9 @@ const PaginaGerenciamento = () => {
         
                 </div>
                 )}
+                
+
+                {mostrarModalCadastro && <ModalCadastroProduto onClose={() => setMostrarModalCadastro(false)} />}
         </div>
     )
 }

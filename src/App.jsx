@@ -8,6 +8,7 @@ import Produtos from "./components/Produtos/Produtos";
 import NavIcon from "./components/NavIcon";
 import Footer from "./components/Footer/Footer";
 import "./App.css";
+// import ModalGerenciamento from "./components/ModalGerenciamento/ModalGerenciamento.jsx"
 
 export default function App() {
     const [appData, setAppData] = useState({
