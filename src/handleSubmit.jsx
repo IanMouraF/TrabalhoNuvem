@@ -1,5 +1,5 @@
 import {firestore} from './firebase'
-import {collection, addDoc, Timestamp} from 'firebase/firestore'
+import {collection, addDoc, Timestamp} from 'firebase/firestore/lite'
 
 export const handleSubmit = async (e) => {
 
