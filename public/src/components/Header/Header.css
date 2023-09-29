@@ -1,0 +1,54 @@
+.header {
+    width: 100%;
+    height: 20vh;
+    background-color: white;
+}
+
+.header .logo {
+    width: 7rem;
+}
+
+.header .line {
+    border-bottom: 2px solid #ececec;
+}
+
+.header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+    margin: 1rem 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06rem;
+    font-size: 0.9rem;   
+}
+
+/* RESPONSIVIDADE */
+@media screen and (max-width: 500px) {
+    .header {
+        margin-bottom: 1.5rem;
+    }
+    .header .line {
+        margin-bottom: 0.5rem;
+    }
+    .header nav {
+        flex-wrap: wrap;
+    }
+    .header nav a { 
+        margin: 0.2rem 1rem;      
+    }
+}
+
+@media screen and (max-width: 385px) {
+    .header {
+        margin-bottom: 6rem;
+    }
+    .header nav {
+        flex-direction: column;
+    }
+}

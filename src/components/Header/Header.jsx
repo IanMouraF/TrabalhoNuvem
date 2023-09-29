@@ -7,15 +7,15 @@ import ModalCadastro from '../ModalCadastro'
 import '../Modal.css'
 import Logout from '../../Logout'
 
-const Header = () => {
+const Header = (props) => {
   return (
-    <div className='header'>
+    <div className='header' style={props.headerStyle}>
       <img src={Logo} alt='Logo' className='logo' />
 
-      <div className='line'></div>
+      <div className='line' style={props.lineStyle}></div>
 
-      <nav className='nav-itens'>
-        <Logout/>
+      <nav className='nav-itens' style={props.navStyle}>
+	<Logout/>
         <ModalLogin />
         <ModalCadastro />
         <Link to=''>Home</Link>

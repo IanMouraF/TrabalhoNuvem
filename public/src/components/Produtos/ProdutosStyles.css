@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans&display=swap");
+
+.products-component {
+    display: flex;
+    padding: 1em;
+    flex-direction: column;
+}
+.products-title {
+    font-size: 2em;
+    font-style: normal;
+    margin-bottom: 0.5em;
+}
+
+.products-grid {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.product {
+    border-radius: 24px;
+    background-color: transparent; /* #cecece87 */
+    display: flex;
+    flex-direction: column;
+    min-height: 100px;
+    cursor: pointer;
+}
+
+.product-image {
+    border-radius: 15px;
+    width: 12.8rem;
+    aspect-ratio: calc(7/4);
+    object-fit: fill;
+    background-size: cover;
+    background-position: center;
+    background-image: url(https://diariodonordeste.verdesmares.com.br/image/contentid/policy:1.3273074:1661909998/Macarr-o-com-carne-moida.jpg?f=default&$p$f=81ff1fa);
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-name {
+    font-size: 1.2em;
+}
+
+.product-price {
+    font-size: 1em;
+}
+
+.product-description {
+    font-size: 1em;
+    color: #929090;
+    font-family: Inria Sans;
+    font-weight: 700;
+}
+
+.products-title,
+.product-name,
+.product-price,
+.product-description {
+    font-family: Inria Sans;
+}
+@media (max-width: 600px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+    .product {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .product-image {
+        width: 33%;
+        height: 100%;
+    }
+    .product-info {
+        padding-left: 0.5em;
+    }
+}
